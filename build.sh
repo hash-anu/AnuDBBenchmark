@@ -1,0 +1,1 @@
+ g++ -std=c++11 anusqlite_benchmark.cpp -I../AnuDB/src/ -I../AnuDB/src/storage_engine/ -I ../AnuDB/third_party/json/ -I ../AnuDB/third_party/rocksdb/include/ -L ../AnuDB/build/ ../AnuDB/build/src/storage_engine/liblibstorage.a ../AnuDB/build/third_party/rocksdb/librocksdb.a -llibanu -o benchmark  -lsqlite3 -pthread
