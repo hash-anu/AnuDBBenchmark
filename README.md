@@ -62,7 +62,7 @@ If no path is given, it defaults to `../AnuDB`.
 ## 📚 More Details
 
 For methodology and performance insights, please refer to our blog:  
-👉 
+👉 [Medium](https://medium.com/@hashmak.jsn/absolutely-ca702d276a08)
 
 ---
 
