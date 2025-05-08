@@ -1,7 +1,8 @@
 # 🚀 AnuDBBenchmark
 This repository benchmarks the performance of [AnuDB](https://github.com/hash-anu/AnuDB), a custom storage engine designed for high-efficiency data operations, in comparison with SQLite3.
 
-⚠️ Disclaimer:This benchmark focuses on specific workloads (insert, query, update, delete, and parallel operations using JSON documents) executed on embedded hardware (e.g., Raspberry Pi).It is not a general-purpose performance comparison.SQLite is a feature-rich, general-purpose SQL database optimized for reliability and transactional correctness across a wide range of use cases.AnuDB is a lightweight engine optimized for high-throughput workloads with a different design philosophy.Results may vary based on workload characteristics, hardware, and tuning parameters.
+>⚠️ Disclaimer:
+This benchmark focuses on specific workloads (insert, query, update, delete, and parallel operations using JSON documents) executed on embedded hardware (e.g., Raspberry Pi).It is not a general-purpose performance comparison.SQLite is a feature-rich, general-purpose SQL database optimized for reliability and transactional correctness across a wide range of use cases.AnuDB is a lightweight engine optimized for high-throughput workloads with a different design philosophy.Results may vary based on workload characteristics, hardware, and tuning parameters.
 ---
 ## 📊 Benchmark Results
 
@@ -159,6 +160,7 @@ Running SQLite3 tests...
   Running delete test...
   Running parallel operations test...
 Thread 0 failed to commit transaction: cannot commit transaction - SQL statements in progress
+(Note: This is a known limitation due to SQLite’s concurrent transaction handling in multithreaded mode.)
 Thread 1 failed to commit transaction: cannot commit transaction - SQL statements in progress
 Thread 2 failed to commit transaction: cannot commit transaction - SQL statements in progress
 Completed SQLite3 tests.
