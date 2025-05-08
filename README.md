@@ -94,8 +94,6 @@ If no path is given, it defaults to `../AnuDB`.
 For methodology and performance insights, please refer to our blog:  
 👉 [Medium](https://medium.com/@hashmak.jsn/absolutely-ca702d276a08)
 
-## 📊 Interactive Report
-[View Interactive Benchmark Report](https://yourusername.github.io/AnuDBBenchmark/)
 ---
 ## 🤩 Example Output
 ```
