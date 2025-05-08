@@ -34,7 +34,7 @@ namespace std {
 // Configuration constants
 const int NUM_DOCUMENTS = 10000;          // Number of documents to insert in each test
 const int NUM_QUERIES = 1000;             // Number of queries to execute in each test
-const int NUM_THREADS = 10;                // Number of concurrent threads for parallel tests
+const int NUM_THREADS = 4;                // Number of concurrent threads for parallel tests
 const std::string DB_PATH_ANUDB = "./benchmark_anudb";
 const std::string DB_PATH_SQLITE = "./benchmark_sqlite.db";
 const std::string COLLECTION_NAME = "products";
@@ -366,7 +366,12 @@ public:
                     // Query
                     if (i % 5 == 0) {
                         json query = {{"$eq", {{"category", productData["category"].get<std::string>()}}}};
-                        collection->findDocument(query);
+			std::vector<std::string> docIds;
+                        docIds = collection->findDocument(query);
+			for (const std::string& docId : docIds) {
+			    anudb::Document doc;
+			    collection->readDocument(docId, doc);
+			}
                     }
                     
                     // Update
